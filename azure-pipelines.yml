@@ -1,0 +1,35 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  artifactName: drop
+
+stages:
+
+- stage: CI
+  jobs:
+  - job: Build
+    steps:
+    - checkout: self
+    - template: templates/ci-steps.yml
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: $(Build.SourcesDirectory)
+        artifact: $(artifactName)
+
+- stage: Deploy_Dev
+  dependsOn: CI
+  jobs:
+  - job: DevDeploy
+    steps:
+    - script: echo "Deploying to DEV"
+
+- stage: Deploy_UAT
+  dependsOn: Deploy_Dev
+  jobs:
+  - job: UATDeploy
+    steps:
+    - script: echo "Deploying to UAT"
