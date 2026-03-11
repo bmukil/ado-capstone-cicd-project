@@ -1,0 +1,8 @@
+Developer → Feature Branch → Pull Request → Main Branch
+                                  ↓
+                               CI Stage
+                       (Build + Test + Artifact)
+                                  ↓
+                          Deploy to DEV (Auto)
+                                  ↓
+                         Deploy to UAT (Approval)
