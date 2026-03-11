@@ -64,5 +64,12 @@
 
 # \- Environment promotion strategy
 
-# \- DevOps governance practices
+\- DevOps governance practices
+
+## Branching Strategy
+===
+
+# Main branch is treated as stable release branch.
+
+# Feature branches are intended for development and pull request validation before merge.
 
