@@ -6,11 +6,17 @@ steps:
   inputs:
     versionSpec: ${{ parameters.nodeVersion }}
 
-- script: npm install
+- script: |
+    cd app
+    npm install
   displayName: Install dependencies
 
-- script: npm test
+- script: |
+    cd app
+    npm test
   displayName: Run tests
 
-- script: npm run build
+- script: |
+    cd app
+    npm run build
   displayName: Build app
