@@ -1,75 +1,23 @@
-# \# Azure DevOps CI/CD Capstone Project
+# Azure DevOps CI/CD Capstone Project
 
-# 
+## Overview
+This project demonstrates a basic multi-stage CI/CD pipeline using Azure DevOps for a Node.js web API application.
 
-# \## Project Overview
+## Pipeline Flow
+Code commit → CI pipeline runs → Build & test execution → Artifact creation → Automatic deployment to Dev → Manual approval before UAT deployment.
 
-# This project demonstrates a basic multi-stage CI/CD pipeline design using Azure DevOps YAML pipelines for a Node.js based web API.
+## Stages
+- **CI** – Install dependencies, run tests, build application, publish artifact  
+- **Deploy Dev** – Automatic deployment simulation  
+- **Deploy UAT** – Deployment after manual approval  
 
-# 
+## Key Concepts Demonstrated
+- YAML based pipeline design  
+- Multi-stage CI/CD implementation  
+- Artifact publishing and reuse  
+- Environment-based deployment flow  
+- Basic DevOps governance and branching strategy  
 
-# \## Pipeline Flow
-
-# Developer commits code → CI pipeline triggers → Application is built and tested → Artifact is generated → Deployment simulated to DEV environment → Manual approval required before UAT deployment.
-
-# 
-
-# \## Stages Implemented
-
-# 
-
-# \### CI Stage
-
-# \- Install Node.js dependencies
-
-# \- Execute test script
-
-# \- Build application
-
-# \- Publish pipeline artifact
-
-# 
-
-# \### Deploy Dev Stage
-
-# \- Simulated automatic deployment after successful CI
-
-# 
-
-# \### Deploy UAT Stage
-
-# \- Simulated deployment representing controlled release with approval gate
-
-# 
-
-# \## Governance Model
-
-# \- Main branch considered protected
-
-# \- Feature branches intended for development
-
-# \- Pull request validation concept applied
-
-# 
-
-# \## Outcome
-
-# This project showcases understanding of:
-
-# \- YAML based pipeline design
-
-# \- Multi-stage CI/CD workflow
-
-# \- Artifact management
-
-# \- Environment promotion strategy
-
-\- DevOps governance practices
-
-## Branching Strategy
-===
-
-# Main branch is treated as stable release branch.
-
-# Feature branches are intended for development and pull request validation before merge.
-
+## Branching Approach
+The **main** branch represents stable code.  
+Feature branches are used for development and merged through pull requests.
